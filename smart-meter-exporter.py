@@ -66,4 +66,4 @@ if __name__ == '__main__':
         v_sag.set(telegram.VOLTAGE_SAG_L1_COUNT.value)
         v_swell.set(telegram.VOLTAGE_SWELL_L1_COUNT.value)
         current_tariff = int(telegram.ELECTRICITY_ACTIVE_TARIFF.value)
-        active_tariff.set(tariff_states[current_tariff])
+        active_tariff.state(tariff_states[current_tariff])
