@@ -1,0 +1,11 @@
+[Unit]
+Description=Smart meter monitoring service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/smart-meter-exporter/smart-meter-exporter.py 8000 '/dev/ttyUSB0'
+User=pi
+
+[Install]
+WantedBy=multi-user.target
